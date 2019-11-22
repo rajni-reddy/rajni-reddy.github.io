@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Reading: Google Pay</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h3 class="brand-name"><b><a href="/">Rajni Reddy</a></b></h3>
+        </header>
+
+        <h1>Redesigning Behance's search experience for discoveribility</h1>
+
+        <div class="item-container">
+            <h2>Problem statement</h2>
+            <p>When users are doing P2P payments, the success status stays for about 2 seconds. If the merchant is busy tending to his other customers, users miss the 2-second window there is and have to navigate down to <b>All Transactions</b>.</p>
+        </div>
+
+        <div class="item-container">
+            <h2>User flow</h2>
+            <p>My goal with user flows was to draw out the existing "work-around" users are doing. Later user flows are guiding light for building wireframes and UI in next steps.</p>
+            <img src="./images/gopay-flow.png" alt="">
+        </div>
+        
+        <div class="item-container">
+            <h2>Wireframe</h2>
+            <p></p>
+            <img src="./images/gopay-wire.jpeg" alt="">
+        </div>
+
+        <div class="item-container images">
+            <h2>UI design</h2>
+            <p>Typically users look for a rectangle or a magnifying glass icon placed on the upper left or right corner of the page. Presence of a label saying “search” or a placeholder and/or a magnifying glass icon makes locating it easier and more intuitive</p>
+
+            <h4>First approach: Introducing a card with the payment details</h4>
+            <img src="./images/gopay-1.png" alt="">
+            <p>My thoughts:
+                <ul>
+                <li>It can be missed by the user as it doesn't grab much attention.</li>
+                <li>Not clear and intuitive enough.</li>
+                <li>Involves another step of clicking on the arrow icon if more details of the payment are required.</li>
+            </ul></p>
+
+            <h4>Second approach: Showing a popup</h4>
+            <img src="./images/gopay-2.png" alt="">
+            <p>My thoughts:
+                <ul>
+                <li>It’s not intuitive enough.</li>
+                <li>It doesn't have any kind of delight hence, it looks bland.</li>
+                <li>The X (close icon) doesn't grab much attention. This makes the user experience less efficient.</li>
+            </ul></p>
+
+            <div class="quote">
+                <p>The pros of both the card and popup design involve mentioning the payment details right after a payment is done. Both the designs, to an extent, add an additional step of going into “All transactions” to check the payment information in detail.</p>
+            </div>
+
+            <h4>Third approach: Turning the entire screen into a success status</h4>
+            <img src="./images/gopay-3.png" alt="">
+            <p>My thoughts:
+                <ul>
+                <li>It doesn't go away unless clicked on “Done” thereby solving the user problem.</li>
+                <li>Continues the usage of existing delightful interaction</li>
+                <li>The “Done” button is very intuitive making the user experience easier compared to the other two options.</li>
+            </ul></p>
+
+            <h4>Fourth approach: Adding animation and detailed payment information</h4>
+            <img src="./images/gopay-4.png" alt="">
+            <p>My thoughts:
+                <ul>
+                <li>It provides a strong delightful experience by adding a “Payment Successful” animation.</li>
+                <li>Automatically takes to another screen with much more detailed payment information.</li>
+            </ul></p>
+
+        </div>
+
+        <div class="item-container">
+            <h2>Conclusion</h2>
+            <p>Showing the payment details upfront and across the entire screen makes the payment experience a lot easier for the user. Hence, both the third and fourth design is a good solution to the problem. One of the ways of measuring success would be observing changes in user journey in sessions where users pay and go into transaction history. There should be a drop in this user journey.</p>
+        </div>
+        
+    </div>
+    <footer class="footer">
+        <a href="/">home</a>
+        <a href="mailto:rajnireddy.629@gmail.com?subject=Hello, let's chat!">email</a>
+    </footer>
+
+    <!-- Zoom effect like Medium.com -->
+    <script src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.3/dist/medium-zoom.min.js"></script>
+    <script>
+        const images = Array.from(document.querySelectorAll(".item-container img"));
+        images.forEach(img => {
+          mediumZoom(img, {
+            margin: 0, /* The space outside the zoomed image */
+            background: "#fff", /* The background of the overlay */
+            scrollOffset: 80, /* The number of pixels to scroll to close the zoom */
+            container: null, /* The viewport to render the zoom in */
+            template: null /* The template element to display on zoom */
+          });
+        });
+    </script>
+</body>
+</html>

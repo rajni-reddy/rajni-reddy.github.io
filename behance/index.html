@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Reading: Behance</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h3 class="brand-name"><b><a href="/">Rajni Reddy</a></b></h3>
+        </header>
+
+        <h1>Redesigning Behance's search experience for discoveribility</h1>
+
+        <div class="item-container">
+            <h3>Problem statement</h3>
+            <p>Behance has a slightly different search experience as compared to industry standards. When search is an important feature of a site its important to make that feature stand out prominently.
+            Behance uses a magnifying glass icon in the upper right corner as a search option. Clicking the icon takes you to another page where a search bar appears right in the top middle of the page. The magnifying glass icon is a valid design decision, however abstracting the search bar unnecessarily should be avoided. Also, the maximization of the search bar takes you to another page thereby slowing down the user flow.</p>
+        </div>
+
+        <div class="item-container">
+            <h3>Research</h3>
+            <p>Behance is a platform where various people with a web or graphic design career can portray and share their work and portfolios. It also allows people to look for design inspirations. So the main goal is to enable users to enjoy the content so that they keep exploring more to engage with.
+            <br><br>A good search design benefits the users and improves the user experience. According to a survey, 50% of the users prefer going straight to the search bar over browsing the hierarchical contents of the site. So to make the user experience quick and efficient its important to have a familiar-looking search for easy identification.
+            <br><br>According to Jakob’s law, users expect your site to work the same way all the other sites they already know. Therefore designing a good search means designing something familiar that the users have already seen.
+            <br><br>Typically users look for a rectangle or a magnifying glass icon placed on the upper left or right corner of the page. Presence of a label saying “search” or a placeholder and/or a magnifying glass icon makes locating it easier and more intuitive.</p>
+        </div>
+        
+        <div class="item-container">
+            <h3>Wireframe</h3>
+            <img src="./images/behance-0.jpeg" alt="">
+        </div>
+
+        <div class="item-container images">
+            <h3>UI design</h3>
+            <p>Typically users look for a rectangle or a magnifying glass icon placed on the upper left or right corner of the page. Presence of a label saying “search” or a placeholder and/or a magnifying glass icon makes locating it easier and more intuitive</p>
+
+            <h4>First design</h4>
+            <img src="./images/behance-1.png" alt="" style="border-radius: 0;">
+            <p>If the search field is an important function of the site, it should be displayed prominently. The white background of the search bar creates a contrast with the Behance navigation bar and that contrast helps in catching the user's attention.</p>
+
+            <h4>Second design</h4>
+            <img src="./images/behance-2.png" alt="" style="border-radius: 0;">
+            <p>It is important to display a full open text field because search hidden behind a magnifying glass icon makes the search less noticeable and increases the interaction cost.
+            <br> <br> 
+            Although the open text field doesn't provide a contrast against the navigation bar and is less noticeable compared to the above design.
+            </p>
+
+            <h4>Third design</h4>
+            <img src="./images/behance-3.png" alt="" style="border-radius: 0;">
+            <p>This design has a magnifying glass icon which on clicking turns into an open text field at the same spot. Although this increases the cost of interaction it doesn’t take you to another page, thereby saving the time that takes to load the page.
+            <br><br>
+            However, having just the magnifying glass icon reduces the discover-ability of the search feature.
+            </p>
+        </div>
+
+        <div class="item-container">
+            <h3>Conclusion</h3>
+            <p>People who are looking for inspiration will be more drawn to searching for things they are specifically looking for. Making the search bar prominent enough to grab users' attention is a good solution to the problem.</p>
+            <p>This is a <b>concept project</b>. Such projects help me understand smaller and more impactful problems products would have.</p>
+        </div>
+        
+    </div>
+    <footer class="footer">
+        <a href="/">home</a>
+        <a href="mailto:rajnireddy.629@gmail.com?subject=Hello, let's chat!">email</a>
+    </footer>
+
+    <!-- Zoom effect like Medium.com -->
+    <script src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.3/dist/medium-zoom.min.js"></script>
+    <script>
+        const images = Array.from(document.querySelectorAll(".item-container img"));
+        images.forEach(img => {
+          mediumZoom(img, {
+            margin: 0, /* The space outside the zoomed image */
+            background: "#fff", /* The background of the overlay */
+            scrollOffset: 80, /* The number of pixels to scroll to close the zoom */
+            container: null, /* The viewport to render the zoom in */
+            template: null /* The template element to display on zoom */
+          });
+        });
+    </script>
+</body>
+</html>
