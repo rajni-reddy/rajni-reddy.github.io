@@ -41,7 +41,6 @@ p {
 }
 
 .about span {
-    text-decoration: line-through;
     opacity: 0.48;
 }
 
@@ -76,7 +75,7 @@ a:hover {
 }
 
 .footer {
-    max-width: 560px;
+    max-width: 720px;
     width: 100%;
     margin: 56px auto 0 10%;
     padding: 24px 0;
