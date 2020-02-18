@@ -26,10 +26,10 @@
             <h2>Problem and hypothesis</h2>
             <p>We have all experienced problems while splitting a bill after a night out with friends or colleagues. The hassle of manually splitting bills is clumsy and complicated. Although the payment option in WhatsApp already exists, it's much easier to split bills in a more organized and efficient way.</p>
 
-            <p>This can be done by allowing the spender to create a split bill and send a request over a group chat. Though you can send the request to an individual chat contact, it is much more systematic to send the request once to everyone at one place. Increasing the adoption of WhatsApp pay. want more users to use it frequently for a wide range of purposes. no awareness or engagement?</p>
-
-            <p>>> Add video of the current flow <<</p>
-            <!-- <img src="./images/gopay-flow.png" alt=""> -->
+            <p>This can be done by allowing the spender to create a split bill and send a request over a group chat. Though you can send the request to an individual chat contact, it is much more systematic to send the request once to everyone at one place.</p>
+            <video class="mobile-video" src="./images/WhatsApp UX.mov" autoplay loop></video>
+            <p class="caption text-center">Current workflow for requesting payments</p>
+            
         </div>
         
         <div class="item-container">
@@ -40,55 +40,81 @@
                 <li>Awareness of WhatsApp Pay</li>
                 <li>Experience of splitting bills app</li>
             </ul>
+
+            <h4 class="mt-medium">Defining and finding our research personas</h4>
+            <p>For this design exercise, I was targeting people within the age group of 20 to 30. Young adults would be the ideal group to start off with because of they:</p>
+            <ul>
+                <li>are independent spenders,</li>
+                <li>have limited spending capacity,</li>
+                <li>and are more tech-savvy.</li>
+            </ul>
+            <p>I found 5 people in my contact list who would fit into this segment with a background ranging from an Software Engineer to Environmentalist to a Doctor.</p>
+            <img src="./images/research-2.png" alt="">
+
+            <h4 class="mt-medium">Top insights from the research</h4>
+            <p>The interviews were scheduled and wrapped up in a day itself. The primary learnings from these were,</p>
+            <ul>
+                <li>Participants preferred splitting bills later than in-person to avoid emotional weightage to splitting bills and focus solely on the fun aspect of an outing. Interestingly, closed groups do not have this emotional weightage of splitting bills.</li>
+                <li>Participants living with room-mates used Splitwise to track shared expenses.</li>
+                <li>3 out of 5 participants were not aware of WhatsApp Pay.</li>
+                <li>Participants who knew about WhatsApp Pay were not using it actively since most of their contacts were not using WhatsApp Pay yet.</li>
+            </ul>
+            <p>From these learnings, one of the top action items would be to focus more on building awareness around WhatsApp Pay. Upon further research, I learned WhatsApp Pay was not out public which explains the poor awareness among the crowd.</p>
+            <img src="./images/research-1.png" alt="">
+
+            <h4 class="mt-medium">Competitive analysis</h4>
+            <p>I would next look at how other apps were handling splitting bills. There were two popular products on the App Store: WeChat and Splitwise. WeChat does offer splitting bills by creating a group of people and then splitting the bill amongst that group. One of the participants has used this feature and mentioned this in the interview.</p>
+            <img src="./images/competitive.png" alt="">
         </div>
 
-        <div class="item-container images">
-            <h2>UI design</h2>
+        <div class="item-container">
+            <h2>Define</h2>
+            <p>From the short research sprint, I realized that the larger problem is of awareness and ideally I’d set focus on solving that problem. For the project, we’d be assuming that awareness is not a problem and WhatsApp is as popular as other payment apps.</p>
 
-            <h4>First approach: Introducing a card with the payment details</h4>
-            <img src="./images/gopay-1.png" alt="">
-            <p>My thoughts:
+            <h4 class="mt-medium">The primary goal of this feature</h4>
+            <p>The primary problem we can solve with this feature inside WhatsApp Pay is - splitting bills and requesting later after the gathering is done. The designs are targeted towards use-cases for one time splitting and not long term use-cases, like, vacation or monthly household expenses.</p>
+
+            <h4 class="mt-medium">Design principle</h4>
+            <p>The core principle is to be simple (as opposed to powerful feature) and being close to WhatsApp UX (obviously.)</p>
+        </div>
+
+        <div class="item-container">
+            <h2>Ideate</h2>
+            <p>For the first version of the feature, I wanted to include most use-cases whilst keeping the feature minimal and simple to use like the rest of app. Future features like reading bills from a picture would be very helpful, similar to <a style="" href="https://play.google.com/store/apps/details?id=com.astepanov.mobile.splitcheck">this app</a> on the Play Store.</p>
+
+            <h4 class="mt-medium">User flow</h4>
+                <p>While drawing this user flow I figured out that there could be possible 3 entry points for this feature.
                 <ul>
-                <li>It can be missed by the user as it doesn't grab much attention.</li>
-                <li>Not clear and intuitive enough.</li>
-                <li>Involves another step of clicking on the arrow icon if more details of the payment are required.</li>
-            </ul></p>
+                    <li>First, the users wants to split bill amongst a group. </li>
+                    <li> Second, the users wants to split between participants (not necessarily part of any group) and starting from WhatsApp home.</li>
+                    <li>Third, same use case as second but requesting payment from a direct message, users would like to add more participants.</p></li>
+                </ul>
+                
+                <img src="./images/user-flow.png" alt="">
+            <h4 class="mt-medium">Wireframes</h4>
+                <p>These set of wireframes were to explore the sender's experience from a group. Here, the person who is spliting the bills is coming into the flows from the group.</p>
+                <img src="./images/Wireframe-1.png" alt="">
+            <h4 class="mt-medium">User interface and Prototype</h4>
+                <p>As part of the WhatsApp platform, I ensured all the components used are from what WhatsApp used for the previous feature. For the UI design I used Figma and clubbed it with Protopie for interactions. This prototype was part of my learning roadmap.</p>
+                <video class="mobile-video" src="./images/WhatsApp Pay.mp4" loop autoplay></video>
+                <p class="caption text-center">Participants selection animation</p>
+            
+            <img src="./images/Interface-1.png" alt="">
+            <p>👆 Everything starts from either Group's settings or inside Payment options. If users start from Payments, we show the contact list to pick from.</p>
 
-            <h4>Second approach: Showing a popup</h4>
-            <img src="./images/gopay-2.png" alt="">
-            <p>My thoughts:
-                <ul>
-                <li>It’s not intuitive enough.</li>
-                <li>It doesn't have any kind of delight hence, it looks bland.</li>
-                <li>The X (close icon) doesn't grab much attention. This makes the user experience less efficient.</li>
-            </ul></p>
+            <img src="./images/Interface-2.png" alt="">
+            <p>👆 Users can switch to the group list from the contact list. After picking participants, users add the total amount. We split the bill equally by default and allow users to customize portion for one and distribute equally amongst the rest.</p>
 
-            <div class="quote">
-                <p>The pros of both the card and popup design involve mentioning the payment details right after a payment is done. Both the designs, to an extent, add an additional step of going into “All transactions” to check the payment information in detail.</p>
-            </div>
+            <img src="./images/Interface-3.png" alt="">
+            <p>The split bill message bubble could be part of direct message or group depending on what users select: group or individuals. A direct message would have only reader's share while group would have the total bill split amongst the group members.</p>
 
-            <h4>Third approach: Turning the entire screen into a success status</h4>
-            <img src="./images/gopay-3.png" alt="">
-            <p>My thoughts:
-                <ul>
-                <li>It doesn't go away unless clicked on “Done” thereby solving the user problem.</li>
-                <li>Continues the usage of existing delightful interaction</li>
-                <li>The “Done” button is very intuitive making the user experience easier compared to the other two options.</li>
-            </ul></p>
-
-            <h4>Fourth approach: Adding animation and detailed payment information</h4>
-            <img src="./images/gopay-4.png" alt="">
-            <p>My thoughts:
-                <ul>
-                <li>It provides a strong delightful experience by adding a “Payment Successful” animation.</li>
-                <li>Automatically takes to another screen with much more detailed payment information.</li>
-            </ul></p>
-
+            <img src="./images/Interface-4.png" alt="">
+            <p>Details for receivers and senders would be different. Receivers have buttons to pay their share and in order to complete that, they have information like, what's this bill for, who has requested for the share, and what was the total amount. On the other hand, senders have access to who have paid and who hasn't.</p>
         </div>
 
         <div class="item-container">
             <h2>Conclusion</h2>
-            <p>Showing the payment details upfront and across the entire screen makes the payment experience a lot easier for the user. Hence, both the third and fourth design is a good solution to the problem. One of the ways of measuring success would be observing changes in user journey in sessions where users pay and go into transaction history. There should be a drop in this user journey.</p>
+            <p>Adding a split bill feature to a payment is a plus but not an essential. As highlighted from the research that WhatsApp Pay has more awareness problems than engagement problems.</p>
         </div>
         
     </div>
