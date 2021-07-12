@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Reading: Spike.sh - Scheduling made flexible for devs 
+    </title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://api.fontshare.com/css?f[]=clash-display@1&f[]=general-sans@1&display=swap" rel="stylesheet">
+    <link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32">
+</head>
+<body>
+    <!-- Branding -->
+    <header>
+        <p><b><a href="../">Rajni Reddy</a></b></p>
+    </header>
+
+    <div class="hero article-hero">
+        <div class="content-container">
+            <h1>Scheduling made flexible for devs</h1>
+        </div>
+
+        <div class="content-group">
+            <h2>Background</h2>
+            <p>
+                Spike.sh is a developer tool which notifies engineering teams when there's an incident. Being an incident management service, having an On-call feature is all the more important for Spike. On-call is essential for easy and efficient handling of new incidents so that no incident is missed.
+            </p>
+            <p>
+                An incident is an event that is not part of normal operations that disrupts operational processes. Without effective incident management, an incident can disrupt business operations, information security, IT systems, employees, customers, and other vital business functions.
+            </p>            
+        </div>
+
+        <div class="content-group">
+            <h2>Problem statements</h2>
+            <p>
+                In 2020, we (Spike.sh) launched a simplified on-call feature. After releasing the first version of our on-call,  our customers reached out with some requests. A common theme across these requests was the lack of customizations & flexibility. While keeping users at the center of the product, we realized the simpler we keep on-call - the more complex it will be in use. Keeping users further away from their goals.
+            </p>
+
+            <p>
+                At Spike.sh, we believe in design with simplicity. Meeting the complicated on-call requirements yet designing something that would be easy to use was challenging.
+            </p>
+        </div>
+        
+        <div class="content-group">
+            <h2>Research</h2>
+            <p>
+                As a regular practice, we spoke (& heard) to users and customers. Some of the major problems that were mentioned in user insights were -
+            </p>
+            <ol>
+                <li>
+                    There was still an immense responsibility on a single on-call member. Given that there was no way to customise a shift, the designated on-call member had to be on-call all the time which was pretty hectic.
+                </li>
+                <li>
+                    Even after custom rotations, users could not get a break between shifts. A 12-hour on-call schedule will go on for 12 hours before passing the responsibility on to another on-call member for the next 12 hours. Giving no option for breaks.
+                </li>
+                <li>
+                    Details of who is on-call and when were inaccessible. The on-call dropdown just mentioned who was currently on-call with no further information.
+                </li>
+            </ol>
+
+        <div class="content-group">
+            <h2>Define</h2>
+            <p>
+                At Spike.sh, we believe in design with simplicity. Meeting the complicated on-call requirements yet designing something that would be easy to use was challenging. 
+            </p>
+            <p>
+                The bigger the team, the more flexible scheduling they will need. 
+            </p>
+
+            <h4 class="mt-medium">Here’s what we added and improved upon</h4>
+            <ul>
+                <li>
+                    Layers: This was the biggest change we brought into On-call. 
+                </li>
+                <li>
+                    Custom timings: Users can now limit their schedules to specific time and days of the week.
+                </li>
+                <li>
+                    Pause and resume a schedule: Previously, the only way to pause a schedule was to delete it which was a bit extreme. 
+                </li>
+                <li>
+                    View timezone: Users can now view their and their teammates’ time zones 
+                </li>
+                <li>
+                    When am I on-call: New and better When am I on-call.
+                </li>
+                <li>
+                    Who is on-call: If you’re not on-call, who is? 
+                </li>
+            </ul>
+        </div>
+
+        <div class="content-group">
+            <h3 class="mt-medium">Adding layers</h3>
+            <p>
+                A layer is the base of a more complicated schedule that you can personalize to your team’s requirements. A basic schedule will have a single layer. Teams can add more layers  to the schedule to match their workflows.
+            </p>
+            <p>
+                Layers also help organise shifts visually, enabling users to easily tell what days and hours a shift covers. 
+            </p>
+            <p>
+                During our research we learnt that adding layers will enable a seamless distribution of duties across the schedule. And it allows on-call members to distribute responsibilities more fluidly without giving rise to gaps (thereby solving Pain point 1.)
+            </p>
+            <p>
+                A layer has single or multiple people, has its own handoff times, and rotation type (daily, weekly, & etc.) These are the same fields needed to create an on-call that already exists in Spike.sh. The way we looked at it is to give the user flexibility to create multiple of these inside a single on-call. Translating and calling it as "LAYERS".
+            </p>
+        </div>
+        <div class="image-group">
+            <img src="#" alt="">
+            <p class="caption text-center">Add screenshot without any gaps here.</p>
+        </div>
+
+        <div class="content-group">
+            <p>
+                With the lack of these layers, there was still a hefty responsibility on one member. Provided there were no custom settings, being on call 24/7 was not really solving the problem of unburdening an on-call member.  
+            </p>
+        </div>
+
+        <div class="content-group">
+            <h3 class="mt-medium">On-call layer UI</h3>
+            <p>
+                We wanted to make the experience of adding layers as simple as possible. Without bringing any major changes to the already existing design. So Layers were added as visually distinguishable elements with all the relevant settings inside each of them.
+            </p>
+            <p>
+                However, this made the design clumsy. What if the user adds 10 layers? They would have to scroll all the way down to reach the 10th layer. 
+            </p>
+        </div>
+        <div class="image-group">
+            <img src="#" alt="">
+            <p class="caption text-center">Add screenshot without any gaps here.</p>
+        </div>
+        <div class="content-group">
+            <p>
+                We then added layers in an accordion manner. With expanding the layer which is being worked on while the others are collapsed. This enables the user to focus on one layer at a time without causing information overload from the other layers. In the above image, you will notice Layer 1 is folded allowing the user to focus on Layer 2.
+            </p>
+        </div>
+
+        <div class="content-group">
+            <h3 class="mt-medium">Custom settings for on-call shift</h3>
+            <p>
+                Being on call 24*7 is not an ideal situation. Users might not want to be on call during office hours or just not be on call for long durations without any break. Inside an individual schedule, there was no way a user could limit the schedule to specific times of the day or days of the week. Incorporating the custom settings allowed users to solve this problem. (ex: 8am to 4pm in a daily rotation.) This solved pain point 2.
+            </p>
+            <p>
+                Clicking on “Customize” enables the user to create shifts for specific hours of the day or specific days and times of the week. This customisation is provided for each layer.
+            </p>
+            <p>
+                Users can choose one of the 2 types of customisations available -
+            </p>
+            <ul>
+                <li>
+                    Everyday customisation - gives the user to select particular times of day to be on-call everyday (ex: 6pm to 9am everyday)
+                </li>
+                <li>
+                    Weekly customisation - gives the user to select particular times of day to be on-call on specific days of week (ex: Friday 6pm to Monday 9am - weekend shift)
+                </li>
+            </ul>
+        </div>
+        <div class="image-group">
+            <img src="#" alt="">
+            <p class="caption text-center">Add screenshot without any gaps here.</p>
+        </div>
+        <div class="content-group">
+            <p>
+                The calendar automatically distributes on-call shifts continuously (24/7) amongst users on a layer based on the rotation type. If you would like to limit the amount of time a user is on-call, instead of having a continuous 24/7 distribution between users, you will need to customize the layer (considering it is not a custom rotation).
+            </p>
+        </div>
+
+        <div class="content-group">
+            <h3 class="mt-medium">Created schedule UI</h3>
+            <p>
+                The created schedule can be viewed inside the on-call schedule details along with a calendar view. The details include who is on-call at present, members involved, the number of layers, and the escalation policies that are using the schedule.
+            </p>
+            <p>
+                The individual expandable/collapsible layers show the related information like the layer name, rotation type, handoff time, members, and custom settings (if any.)
+            </p>
+        </div>
+        <div class="image-group">
+            <img src="#" alt="">
+            <p class="caption text-center">Add screenshot without any gaps here.</p>
+        </div>
+
+        <div class="content-group">
+            <h3 class="mt-medium">“When am I on-call” and “Who’s on call now”</h3>
+            <p>
+                New and improved “When am I on-call” and “ Who is On-Call Now” features were designed for better access and understanding. We decided to show these inside the on-call dropdown which is perpetually present on the dashboard header for easy and anytime access.
+            </p>
+        </div>
+        <div class="image-group">
+            <img src="#" alt="">
+            <p class="caption text-center">Add screenshot without any gaps here.</p>
+        </div>
+        <div class="content-group">
+            <p>
+                The above is the previous design. You will notice it neither has any associated details in view nor did we take into consideration that more than one member can be on-call at any given time.
+            </p>
+        </div>
+        <div class="image-group">
+            <img src="#" alt="">
+            <p class="caption text-center">Add screenshot without any gaps here.</p>
+        </div>
+        <div class="content-group">
+            <p>
+                This is the new design which follows a similar pattern but with more details that appear inside a modal after clicking the “View” button. This solves pain point 3.
+            </p>
+        </div>
+
+        <div class="content-group mt-medium">
+            <h2>In conclusion</h2>
+            <p>
+                After the release of the first on-call version, we were quick to realize that the on-call experience has to be flexible for the users to get value out of it. With the addition of custom rotation type, on-call layers, and custom settings inside those layers, we did solve some of the major issues of the first version. Like always, there is room for improvements. We’ll be building those with further research & testing. 
+            </p>
+        </div>
+        
+    </div>
+    <footer class="footer">
+        <a href="/">home</a>
+        <a href="mailto:rajnireddy.629@gmail.com?subject=Hello, let's chat!">email</a>
+    </footer>
+
+    <!-- Zoom effect like Medium.com -->
+    <script src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.3/dist/medium-zoom.min.js"></script>
+    <script>
+        const images = Array.from(document.querySelectorAll("img"));
+        images.forEach(img => {
+          mediumZoom(img, {
+            margin: 0, /* The space outside the zoomed image */
+            background: "#fff", /* The background of the overlay */
+            scrollOffset: 80, /* The number of pixels to scroll to close the zoom */
+            container: null, /* The viewport to render the zoom in */
+            template: null /* The template element to display on zoom */
+          });
+        });
+    </script>
+</body>
+</html>
